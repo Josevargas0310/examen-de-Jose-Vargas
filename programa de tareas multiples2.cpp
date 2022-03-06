@@ -12,9 +12,11 @@ int opcion; //variable del menu
 int a; //varible donde se guarda el numero ingresado del apartado de factorial 
 int num; //varible que se utiliza en la funcion factorial 
 int numero; //varible que se utilizara en el proceso de la tabla de multiplicar 
+int j;// variable que se utiliza en el for de la funcion de la tabla de multiplicar
 int i, vector[10]; //varible que se utiliza para la funcion de los numeros pares e impares 
 int sumaT; // variable donde se aguardan los datos de la suma de los numeros pares e impare
-int j;
+int dialab; //varible que nos ayuda con el procesos de los dias de la semana se utiliza para el guarado de la eleccion 
+
 
 //llamado de las funcion principal 
 int main()
@@ -59,7 +61,8 @@ void menu(){
 	
 	// funcionamiento de los numeros pares e impares 
 	//este for nos ayuda con el pedido de los 10 numeros para luego guardarlo en el arreglo 
-	case 3: for (i=0; i<10; i++){
+	case 3: cout<<"funcion de numeros pares e impares "<<endl; 
+	for (i=0; i<10; i++){
     printf("ingrese el numero %d: ", i+1);
     scanf("%d", &vector[i]);
     
@@ -88,6 +91,30 @@ void menu(){
 	system("pause");
 	break;
 	
+	//funcion que hara el proceso de los dias de la semana que se trabaja y cuales no 
+	case 4: 
+	//mensaje que se le presenta al usuario para que eliga una opcion 
+	cout<<"\n \t ingrese el numero de la semana que corresponde al dia que quiere saber si se trabaja o no"<<endl;
+	cout<<"\n 1. Lunes, 2. Martes, 3. Miercoles, 4. Jueves, 5. Viernes, 6. Sabado, 7. Domingo"<<endl; 
+	cin>>dialab;
+	switch (dialab)
+	{
+		case 1: cout<<"\n Dia Lunes que aburrido. Pero animo es el primer dia de trabajo de la semana, SI ES UN DIA LABORAL. "<<endl;
+		break; 
+		case 2: cout<<"\n Dia Martes. ES UN DIA LABORAL "<<endl;
+		break;
+		case 3: cout<<"\n Dia Miercoles. Animo campe@n ya mero termina la semana, SI ES UN DIA LABORAL. "<<endl;
+		break;
+		case 4: cout<<"\n Dia Jueves. ES UN DIA LABORAL"<<endl; 
+		break;
+		case 5: cout<<"\n Dia Viernes y el cuerpo lo sabe. Pero, SI ES UN DIA LABORAL"<<endl; 
+		break;
+		case 6: cout<<"\n Dia Sabado, Bien campeon llegaste hasta aca, ES UN DIA LABORAL, pero solo se trabaja medio dia"<<endl;
+		break;
+		case 7: cout<<"\n Dia Domingo al fin descanso, NO ES UN DIA LABORAL"<<endl; 
+	}
+	
+
 
 	
 		
